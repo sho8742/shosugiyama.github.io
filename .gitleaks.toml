@@ -1,0 +1,15 @@
+# gitleaks カスタム設定（shosugiyama.github.io）
+# 詳細: https://github.com/gitleaks/gitleaks#configuration
+#
+# 基本は公式デフォルトルールを継承し、誤検出のみ allowlist で除外する。
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "誤検出の除外"
+
+# 除外パス
+paths = [
+  '''\.gitleaks\.toml$''',  # 本ファイル自身
+]

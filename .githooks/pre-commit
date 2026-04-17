@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# gitleaks pre-commit hook
+# ステージ済み差分を gitleaks stdin に流して秘密情報を検知する
+set -e
+
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "⚠ gitleaks が見つかりません。brew install gitleaks を実行してください。"
+  echo "  （一時的にスキップするには: git commit --no-verify）"
+  exit 1
+fi
+
+# ステージ中の差分を取得。空なら何もしない。
+DIFF=$(git diff --cached)
+if [ -z "$DIFF" ]; then
+  exit 0
+fi
+
+# configが存在するなら使う
+CONFIG_OPT=""
+if [ -f .gitleaks.toml ]; then
+  CONFIG_OPT="--config=.gitleaks.toml"
+fi
+
+# stdin にdiffを流す。exit code 1 = leaks検出
+if ! echo "$DIFF" | gitleaks stdin $CONFIG_OPT --no-banner --redact --verbose; then
+  echo ""
+  echo "🚨 秘密情報らしき文字列を検出しました。コミットを中止します。"
+  echo "   該当箇所を修正するか、誤検出なら .gitleaks.toml の allowlist に追加してください。"
+  echo "   （緊急で通したい場合: git commit --no-verify）"
+  exit 1
+fi
+
+exit 0
