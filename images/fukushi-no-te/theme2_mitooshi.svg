@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-labelledby="t2title t2desc" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif">
+  <title id="t2title">お金の見通しが立つ</title>
+  <desc id="t2desc">日々の記録から毎月・年度の報酬見込みが把握できる様子のイメージ図</desc>
+  <defs>
+    <filter id="s2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#8a6f47" flood-opacity="0.16"/>
+    </filter>
+    <linearGradient id="b2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf9f6"/><stop offset="1" stop-color="#f1ede5"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#b89a6e"/><stop offset="1" stop-color="#8a6f47"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" rx="16" fill="url(#b2)"/>
+
+  <!-- 見出し -->
+  <text x="44" y="56" font-size="20" font-weight="700" fill="#2c2c2c">毎月・年度の見込みを把握</text>
+  <text x="44" y="80" font-size="13.5" fill="#6b6b6b">資金繰りや加算配分を考える土台に</text>
+
+  <!-- グラフパネル -->
+  <g filter="url(#s2)">
+    <rect x="44" y="104" width="300" height="176" rx="14" fill="#ffffff" stroke="#e7e1d6" stroke-width="1.5"/>
+  </g>
+  <!-- 軸 -->
+  <g stroke="#e0d8c8" stroke-width="1.5">
+    <path d="M78 138 h236"/><path d="M78 178 h236"/><path d="M78 218 h236"/>
+  </g>
+  <path d="M78 128 V250 H314" fill="none" stroke="#c9bda6" stroke-width="2" stroke-linecap="round"/>
+  <!-- 棒（右肩上がり） -->
+  <g fill="url(#bar2)">
+    <rect x="104" y="208" width="30" height="42" rx="4"/>
+    <rect x="158" y="186" width="30" height="64" rx="4"/>
+    <rect x="212" y="160" width="30" height="90" rx="4"/>
+    <rect x="266" y="138" width="30" height="112" rx="4"/>
+  </g>
+  <!-- 見込みライン -->
+  <path d="M119 200 L173 178 L227 150 L281 130" fill="none" stroke="#6b5638" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 0"/>
+  <g fill="#6b5638"><circle cx="119" cy="200" r="3.4"/><circle cx="173" cy="178" r="3.4"/><circle cx="227" cy="150" r="3.4"/><circle cx="281" cy="130" r="3.4"/></g>
+
+  <!-- ¥ バッジ -->
+  <g filter="url(#s2)"><circle cx="392" cy="150" r="40" fill="#8a6f47"/></g>
+  <text x="392" y="165" text-anchor="middle" font-size="44" font-weight="700" fill="#ffffff">¥</text>
+
+  <!-- 月次・年度 ラベル -->
+  <g font-size="13" font-weight="600">
+    <rect x="352" y="214" width="82" height="28" rx="14" fill="#efe7d8" stroke="#e0d2b8"/>
+    <text x="393" y="233" text-anchor="middle" fill="#5a4d39">月　次</text>
+    <rect x="352" y="250" width="82" height="28" rx="14" fill="#efe7d8" stroke="#e0d2b8"/>
+    <text x="393" y="269" text-anchor="middle" fill="#5a4d39">年　度</text>
+  </g>
+</svg>

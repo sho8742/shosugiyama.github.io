@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-labelledby="t3title t3desc" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif">
+  <title id="t3title">送迎が見える化できる</title>
+  <desc id="t3desc">送迎の計画を地図上で組み立て、印刷して使える様子のイメージ図</desc>
+  <defs>
+    <filter id="s3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#8a6f47" flood-opacity="0.16"/>
+    </filter>
+    <linearGradient id="b3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf9f6"/><stop offset="1" stop-color="#f1ede5"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" rx="16" fill="url(#b3)"/>
+
+  <!-- 見出し -->
+  <text x="44" y="56" font-size="20" font-weight="700" fill="#2c2c2c">送迎を地図で組み立て</text>
+  <text x="44" y="80" font-size="13.5" fill="#6b6b6b">頭の中の段取りを、誰でも引き継げる形に</text>
+
+  <!-- 地図パネル -->
+  <g filter="url(#s3)">
+    <rect x="44" y="104" width="392" height="186" rx="14" fill="#f4f1ea" stroke="#e7e1d6" stroke-width="1.5"/>
+  </g>
+  <!-- 道路風のうすい線 -->
+  <g stroke="#e3dccc" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M70 150 H410"/><path d="M120 120 V272"/><path d="M300 120 V272"/><path d="M70 232 H410"/>
+  </g>
+  <!-- ルート（破線） -->
+  <path d="M96 248 C 150 248, 150 168, 210 168 S 320 200, 360 138" fill="none" stroke="#8a6f47" stroke-width="3.4" stroke-linecap="round" stroke-dasharray="2 9"/>
+
+  <!-- ピン -->
+  <g>
+    <g transform="translate(96,248)"><path d="M0 0 C -10 -16, 10 -16, 0 0 Z" fill="#8a6f47"/><circle cx="0" cy="-11" r="7" fill="#8a6f47"/><circle cx="0" cy="-11" r="3" fill="#fff"/></g>
+    <g transform="translate(210,168)"><path d="M0 0 C -10 -16, 10 -16, 0 0 Z" fill="#8a6f47"/><circle cx="0" cy="-11" r="7" fill="#8a6f47"/><circle cx="0" cy="-11" r="3" fill="#fff"/></g>
+  </g>
+  <!-- 目的地（事業所）フラッグ -->
+  <g transform="translate(360,138)">
+    <path d="M0 4 V-22" stroke="#6b5638" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M0 -22 H16 L12 -16 L16 -10 H0 Z" fill="#6b5638"/>
+  </g>
+
+  <!-- 送迎車（丸っこい） -->
+  <g transform="translate(150,196)">
+    <rect x="-26" y="-14" width="52" height="22" rx="7" fill="#ffffff" stroke="#8a6f47" stroke-width="2.4"/>
+    <path d="M-26 -4 h52" stroke="#8a6f47" stroke-width="2"/>
+    <rect x="-20" y="-10" width="14" height="9" rx="2" fill="#efe7d8"/>
+    <circle cx="-14" cy="10" r="5" fill="#6b5638"/><circle cx="14" cy="10" r="5" fill="#6b5638"/>
+  </g>
+
+  <!-- 印刷アイコン -->
+  <g transform="translate(398,250)" stroke="#8a6f47" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-16" y="-6" width="32" height="18" rx="3" fill="#fff"/>
+    <path d="M-10 -6 v-9 h20 v9"/>
+    <rect x="-10" y="6" width="20" height="12" rx="2" fill="#efe7d8"/>
+  </g>
+</svg>

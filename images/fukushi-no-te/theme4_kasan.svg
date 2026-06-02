@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" role="img" aria-labelledby="t4title t4desc" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif">
+  <title id="t4title">加算も期限も、まとめて管理</title>
+  <desc id="t4desc">加算の算定状況と、受給者証・個別支援計画などの有効期限を管理し、お知らせする様子のイメージ図</desc>
+  <defs>
+    <filter id="s4" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#8a6f47" flood-opacity="0.16"/>
+    </filter>
+    <linearGradient id="b4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf9f6"/><stop offset="1" stop-color="#f1ede5"/>
+    </linearGradient>
+    <linearGradient id="cal4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9b805a"/><stop offset="1" stop-color="#8a6f47"/>
+    </linearGradient>
+    <linearGradient id="shield4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7a6240"/><stop offset="1" stop-color="#6b5638"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="340" rx="16" fill="url(#b4)"/>
+
+  <!-- 見出し -->
+  <text x="44" y="52" font-size="20" font-weight="700" fill="#2c2c2c">加算も期限も、まとめて管理</text>
+  <text x="44" y="76" font-size="13.5" fill="#6b6b6b">算定漏れも、更新忘れによる失効も防ぐ</text>
+
+  <!-- カレンダー（期限管理の主役） -->
+  <g filter="url(#s4)">
+    <rect x="44" y="100" width="214" height="196" rx="14" fill="#ffffff" stroke="#e7e1d6" stroke-width="1.5"/>
+  </g>
+  <rect x="44" y="100" width="214" height="46" rx="14" fill="url(#cal4)"/>
+  <rect x="44" y="124" width="214" height="22" fill="#8a6f47"/>
+  <!-- カレンダーのリング -->
+  <g fill="#efe7d8"><rect x="80" y="92" width="8" height="20" rx="4"/><rect x="214" y="92" width="8" height="20" rx="4"/></g>
+  <text x="151" y="131" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">有効期限の管理</text>
+  <!-- 日付グリッド -->
+  <g fill="#efe7d8" stroke="#e7ddca" stroke-width="1">
+    <rect x="64"  y="162" width="26" height="22" rx="4"/><rect x="96"  y="162" width="26" height="22" rx="4"/><rect x="128" y="162" width="26" height="22" rx="4"/><rect x="160" y="162" width="26" height="22" rx="4"/><rect x="192" y="162" width="26" height="22" rx="4"/>
+    <rect x="64"  y="190" width="26" height="22" rx="4"/><rect x="96"  y="190" width="26" height="22" rx="4"/><rect x="128" y="190" width="26" height="22" rx="4"/><rect x="160" y="190" width="26" height="22" rx="4"/><rect x="192" y="190" width="26" height="22" rx="4"/>
+  </g>
+  <!-- 期限の当たった日（強調） -->
+  <rect x="128" y="162" width="26" height="22" rx="4" fill="#8a6f47"/>
+  <rect x="192" y="190" width="26" height="22" rx="4" fill="#b5482f"/>
+  <!-- 期限ラベル -->
+  <g font-size="12.5" font-weight="600">
+    <circle cx="64" cy="238" r="4" fill="#8a6f47"/>
+    <text x="76" y="242" fill="#5a4d39">受給者証の更新</text>
+    <circle cx="64" cy="266" r="4" fill="#b5482f"/>
+    <text x="76" y="270" fill="#5a4d39">個別支援計画の見直し</text>
+  </g>
+
+  <!-- 盾（守り）＋チェック -->
+  <g transform="translate(330,150)">
+    <g filter="url(#s4)">
+      <path d="M0 -46 L40 -32 V0 C40 30, 22 48, 0 58 C -22 48, -40 30, -40 0 V-32 Z" fill="url(#shield4)"/>
+    </g>
+    <path d="M-18 2 l12 13 l24 -28" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="330" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="#6b5638">うっかり失効を防ぐ</text>
+
+  <!-- ベル（お知らせ） -->
+  <g transform="translate(404,266)">
+    <g filter="url(#s4)"><circle cx="0" cy="0" r="34" fill="#ffffff" stroke="#e7e1d6" stroke-width="1.5"/></g>
+    <g stroke="#8a6f47" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-11 5 C -11 -7, -7 -14, 0 -14 C 7 -14, 11 -7, 11 5 Z" fill="#efe7d8"/>
+      <path d="M-14 5 h28"/>
+      <path d="M-3 10 a3.5 3.5 0 0 0 6 0"/>
+      <path d="M0 -14 v-4"/>
+    </g>
+    <circle cx="11" cy="-10" r="5.5" fill="#b5482f"/>
+  </g>
+
+  <!-- 加算チェック（攻めも残す・小） -->
+  <text x="330" y="288" text-anchor="middle" font-size="12.5" fill="#9a8e7a">加算の算定漏れも防止</text>
+</svg>
